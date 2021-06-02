@@ -1,0 +1,669 @@
+<!-- 
+
+  ,-.       _,---._ __  / \
+ /  )    .-'       `./ /   \
+(  (   ,'            `/    /|
+ \  `-"             \'\   / |
+  `.      You     ,  \ \ /  |
+   /`.          ,'-`----Y   |
+  (            ;        |   '
+  |  ,-.    ,-'         |  /
+  |  | (   |            | /
+  )  |  \  `.___________|/
+  `--'   `--'
+
+      ,---.
+   ,.'-.   \
+  ( ( ,'"""""-.
+  `,X          `.
+  /` `           `._
+ (      ME    ,   ,_\
+ |          ,---.,'o `.
+ |         / o   \     )
+  \ ,.    (      .____,
+   \| \    \____,'     \
+ '`'\  \        _,____,'
+ \  ,--      ,-'     \
+   ( C     ,'         \
+    `--'  .'           |
+      |   |         .O |
+    __|    \        ,-'_
+   / `L     `._  _,'  ' `.
+  /    `--.._  `',.   _\  `
+  `-.       /\  | `. ( ,\  \
+ _/  `-._  /  \ |--'  (     \
+'  `-.   `'    \/\`.   `.    )
+      \  -hrr-    \ `.  |    |
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RemoteNA - Remote Team Boutique Service</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- Hotjar Tracking Code for https://www.remotenactive.com/en -->
+    <script>
+      setTimeout(function() {
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:2413342,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+      }, 10000);
+    </script>
+    <!-- SEO Meta -->
+    <!-- Tailwind & JS Components -->
+    
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script async defer data-domain="remotenactive.com" src="https://plausible.io/js/plausible.js"></script>
+    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2/dist/confetti.browser.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+      var _iub = _iub || [];
+      _iub.csConfiguration = {"gdprAppliesGlobally":false,"countryDetection":true,"consentOnContinuedBrowsing":false,"perPurposeConsent":true,"whitelabel":false,"lang":"en","siteId":2243690,"cookiePolicyId":51077262,"cookiePolicyUrl":"https://remotenactive.com/en/cookies-no-head.html", "banner":{ "acceptButtonDisplay":true,"customizeButtonDisplay":true,"acceptButtonColor":"#d1fae5","acceptButtonCaptionColor":"#1f2937","customizeButtonColor":"#e5e7eb","customizeButtonCaptionColor":"#6b7280","rejectButtonDisplay":true,"rejectButtonColor":"#f9fafb","rejectButtonCaptionColor":"#1f2937","position":"float-bottom-center","textColor":"#1f2937","backgroundColor":"#d1d5db" }};
+    </script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+    <style> 
+      html {
+          scroll-behavior: smooth;}
+
+      .scrollToTopBtn {
+          background-color: #6b46c1;
+          border: none;
+          border-radius: 50%;
+          color: white;
+          cursor: pointer;
+          font-size: 16px;
+          line-height: 48px;
+          width: 48px;
+          
+          /* place it at the bottom right corner */
+          position: fixed;
+          bottom: 30px;
+          right: 30px;
+          /* keep it at the top of everything else */
+          z-index: 100;
+          /* hide with opacity */
+          opacity: 0;
+          /* also add a translate effect */
+          transform: translateY(100px);
+          /* and a transition */
+          transition: all .5s ease
+        }
+
+      .showBtn {
+          opacity: 1;
+          transform: translateY(0)
+        }
+
+    </style>
+</head>
+<body class="bg-indigo-100">
+    
+  <!-- Header -->
+  <my-header></my-header>
+  <!-- Konfetti -->
+  <script>
+      var count = 1500;
+      var defaults = {
+        origin: { y: 0.7 }
+      };
+      
+      function fire(particleRatio, opts) {
+        confetti(Object.assign({}, defaults, opts, {
+          particleCount: Math.floor(count * particleRatio)
+        }));
+      }
+      
+      fire(0.25, {
+        spread: 26,
+        startVelocity: 55,
+      });
+      fire(0.2, {
+        spread: 60,
+      });
+      fire(0.35, {
+        spread: 100,
+        decay: 0.91,
+        scalar: 0.8
+      });
+      fire(0.1, {
+        spread: 120,
+        startVelocity: 25,
+        decay: 0.92,
+        scalar: 1.2
+      });
+      fire(0.1, {
+        spread: 120,
+        startVelocity: 45,
+      });
+  </script>
+  <!-- Hero Section -->
+  <div class="relative flex flex-col py-16 lg:pt-0 lg:flex-col lg:pb-0 bg-indigo-100">
+      <div class="flex flex-col items-start w-full max-w-xl px-4 mx-auto lg:px-8 lg:max-w-screen-xl">
+        <div class="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
+          <div class="max-w-xl mb-6">
+            <div>
+
+            </div>
+            <span class="max-w-lg mb-6 font-sans text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl sm:leading-none">
+              <span class="text-purple-800">Connect </span>with your Team, even if you're <br class="hidden md:block" />
+               <span style="color: #e500a4;"> miles apart</span>
+            </span>
+            <br> <br>
+            <p >
+              <p class="text-xl sm:text-xl" >We will create your <b>Activity Playbook</b>,
+               so you can <b>feel like you're in the same office</b></p>
+            </p>
+            <br>
+          </div>
+          <div class="flex flex-col items-center md:flex-row">
+            <button id="openCalendar" 
+            class="inline-flex items-center justify-center w-full h-12 px-6 mb-3 font-medium tracking-wide text-white transition duration-200 rounded md:w-auto md:mr-4 md:mb-0 bg-purple-800 hover:bg-purple-900">
+            <a href="/">
+              Book your free call
+            </a></button>
+            <a href="#experts" 
+            aria-label="" 
+            class="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700">Learn more</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="inset-y-0 right-0 w-full max-w-xl px-4 mx-auto lg:pl-8 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-1/2 lg:max-w-full lg:absolute xl:px-0 rounded-md">
+        
+        <video class="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none sm:h-96 lg:h-full" volume=0 loop autoplay="autoplay" muted >
+
+          <source src="vid/remotenactive_2ßs.mp4" type="video/mp4" > </source>
+          
+          </video>
+      </div>
+  </div>
+  <!-- Experts & Media -->
+  <section class="text-gray-600 body-font bg-indigo-100">
+      <div class="container px-5 py-24 mx-auto" id="experts" data-aos="fade-down">
+        <div class="flex flex-col text-center w-full mb-20">
+          <h1 class="sm:text-4xl text-3xl font-bold title-font text-gray-900">It's easy to feel a little disconnected</h1>
+          <div class="flex justify-center mt-6">
+            <div class="inline-flex w-16 h-1 bg-purple-800 rounded-full"></div>
+          </div>
+        </div>
+        <div class="flex flex-wrap -m-4">
+          <div class="p-4 md:w-1/3">
+            <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+              <div class="mb-3 text-center" >              
+                <h2 class="text-gray-900 text-4xl title-font font-bold text-center">⚡</h2>
+              </div>
+              <div class="flex items-center mb-3">              
+                <h2 class="text-gray-900 text-lg title-font font-medium italic">"Workers report more anxiety and stress"</h2>
+              </div>
+              <div class="flex-grow">
+                <p class="leading-relaxed text-base"></p>
+                <p class="mt-3 text-purple-800 inline-flex items-center"><b>Forbes </b> </p> <br>
+                <a href="https://www.forbes.com/sites/bryanrobinson/2020/06/19/is-working-remote-a-blessing-or-burden-weighing-the-pros-and-cons/?sh=45ba88bf40a9" 
+                class="mt-3 text-purple-800 inline-flex items-center underline"> Is Working Remote A Blessing Or Burden? at Forbes.com </a>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 md:w-1/3">
+            <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+              <div class="mb-3 text-center" >              
+                <h2 class="text-gray-900 text-4xl title-font font-bold text-center">😩</h2>
+              </div>
+              <div class="flex items-center mb-3">
+                <h2 class="text-gray-900 text-lg title-font font-medium italic">"Remote Workers Feel shunned and left out"</h2>
+              </div>
+              <div class="flex-grow">
+                <p class="leading-relaxed text-base"></p>
+                <p class="mt-3 text-purple-800 inline-flex items-center"><b>Harvard Business Review </b> </p> <br>
+                <a href="https://hbr.org/2017/11/a-study-of-1100-employees-found-that-remote-workers-feel-shunned-and-left-out" 
+                class="mt-3 text-purple-800 inline-flex items-center underline"> A Study of 1,100 Employees at hbr.org </a>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 md:w-1/3">
+            <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+              <div class="mb-3 text-center" >              
+                <h2 class="text-gray-900 text-4xl title-font font-bold text-center">🤹</h2>
+              </div>
+              <div class="flex items-center mb-3">
+                <h2 class="text-gray-900 text-lg title-font font-medium italic">"Organizations will have to adjust their practices to capture potential productivity gains from remote work"</h2>
+              </div>
+              <div class="flex-grow">
+                <p class="mt-3 text-purple-800 inline-flex items-center"><b>Future of Remote Work </b></p>
+                <a href="https://www.mckinsey.com/featured-insights/future-of-work/whats-next-for-remote-work-an-analysis-of-2000-tasks-800-jobs-and-nine-countries" 
+                class="mt-3 text-purple-800 inline-flex items-center underline"> McKinsey Global Institute at mckinsey.com       </a>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- Features -->
+  <section class="text-gray-600 body-font bg-indigo-100" data-aos="fade-down">
+      <div class="container px-5 py-22 mx-auto">
+        <div class="mb-20 text-center">
+          <h1 class="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl title-font">✨Our mission is your 😊 while working remote ✨</h1>
+          <p class="mx-auto text-base leading-relaxed xl:w-2/4 lg:w-3/4 text-gray-500s"></p>
+          <div class="flex justify-center mt-6">
+            <div class="inline-flex w-16 h-1 bg-purple-800 rounded-full"></div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap -mx-4 -mt-4 -mb-10 space-y-6 sm:-m-4 md:space-y-0">
+          <div class="flex flex-col items-center p-4 text-center md:w-1/3">
+            <div class="inline-flex items-center justify-center flex-shrink-0 w-20 h-20 mb-5 text-purple-500 bg-indigo-100 rounded-full">
+              <svg fill="none"
+              stroke="currentColor" 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              stroke-width="2" 
+              class="w-14 h-14" 
+              viewBox="0 0 24 24">
+                <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <div class="flex-grow">
+              <h2 class="mb-3 text-xl font-bold text-gray-900 title-font">Team Spirit</h2>
+            <p class="text-base leading-relaxed">Get to know your remote team on a <b>personal level</b> with modern alternatives to the water-cooler </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center p-4 text-center md:w-1/3">
+            <div class="inline-flex items-center justify-center flex-shrink-0 w-20 h-20 mb-5 text-purple-500 bg-indigo-100 rounded-full">
+              <svg fill="none" 
+              stroke="currentColor" 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              stroke-width="2" 
+              class="w-14 h-14" 
+              viewBox="0 0 24 24">
+                <path d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
+              </svg>
+            </div>
+            <div class="flex-grow">
+              <h2 class="mb-3 text-xl font-bold text-gray-900 title-font">Productivity</h2>
+              <p class="text-base leading-relaxed"> Great teams create <b>great work</b> and thrive together</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center p-4 text-center md:w-1/3">
+            <div class="inline-flex items-center justify-center flex-shrink-0 w-20 h-20 mb-5 text-purple-500 bg-indigo-100 rounded-full">
+              <svg fill="none" 
+              stroke="currentColor" 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              stroke-width="2" 
+              class="w-14 h-14" 
+              viewBox="0 0 24 24">
+                <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+              </svg>
+            </div>
+            <div class="flex-grow">
+              <h2 class="mb-3 text-xl font-bold text-gray-900 title-font">Positive Vibes</h2>
+              <p class="text-base leading-relaxed">Keep your remote work day positive with <b> exciting tools and apps</b> </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+  </section>
+  <br>
+  <br>
+  <!-- CTA3 -->
+  <section class="text-gray-600 body-font bg-purple-900" data-aos="fade-down">
+      <div class="container px-5 py-24 mx-auto ">
+        <div class="flex flex-col items-start mx-auto lg:w-2/3 sm:flex-row sm:items-center">
+          <h1 class="flex-grow text-3xl font-bold text-white sm:pr-18 title-font">We will create your<br> 
+            <span style="color: #e500a4;">Team Activity Playbook,</span> <div id="how">    
+          <p class="text-white text-medium ">or support you with the implementation.</p> </h1>
+          <button 
+            id="openCalendar" 
+            class="flex-shrink-0 px-8 py-2 mt-10 ml-1 text-xl text-white border-0 rounded focus:outline-none hover:bg-purple-800 sm:mt-2" 
+            style="background-color: #e500a4;">
+            Great, let's talk!</button>
+        </div>
+      </div>
+  </section>
+  <!-- How  -->
+  <section class="text-gray-600 body-font bg-indigo-100"  >
+      <br>       
+      <div class="text-center mb-18" data-aos="fade-down">
+         <h1 class="mb-4 text-2xl font-bold text-gray-900 sm:text-3xl title-font">How we work</h1>
+         <div class="flex justify-center mt-6">
+           <div class="inline-flex w-16 h-1 bg-purple-800 rounded-full"></div>
+         </div>
+      </div>
+      <div class="container flex flex-wrap px-5 py-24 mx-auto ">
+        <div class="flex flex-wrap w-full" data-aos="fade-right" data-aos-duration="1250" >
+          <div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
+            <div class="relative flex pb-12">
+              <div class="absolute inset-0 flex items-center justify-center w-10 h-full">
+                <div class="w-1 h-full bg-white pointer-events-none"></div>
+              </div>
+              <div class="relative z-10 inline-flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-purple-800 rounded-full">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+                </svg>
+              </div>
+              
+              <div class="flex-grow pl-4">
+                <h2 class="mb-1 font-bold tracking-wider text-gray-900 title-font text-m">STEP 1</h2>
+                <p class="leading-relaxed">20 Intro talk - <b>free & no obligations</b></p>
+              </div>
+            </div>
+            <div class="relative flex pb-12">
+              <div class="absolute inset-0 flex items-center justify-center w-10 h-full">
+                <div class="w-1 h-full bg-white pointer-events-none"></div>
+              </div>
+              <div class="relative z-10 inline-flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-purple-800 rounded-full">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  
+                  <path d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                </svg>
+              </div>
+              <div class="flex-grow pl-4">
+                <h2 class="mb-1 font-bold tracking-wider text-gray-900 title-font text-m">STEP 2</h2>
+                <p class="leading-relaxed">Convinced? We get going: </p>
+                <br>
+                <p class="leading-relaxed">📌 Status quo <br>
+                 You'll receive a <b>digital questionnaire</b></p>
+                <br>
+                <p class="leading-relaxed">✔️ Optimization <br> 
+                Together in <b>one to two sessions</b></p> <br>
+                <p class="leading-relaxed">🙋 Questions, wishes? <br>
+                We are only one <b>call or chat-message</b> away </p>
+              </div>
+            </div>
+            <div class="relative flex pb-12">
+
+              <div class="relative z-10 inline-flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-purple-800 rounded-full">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                  <path d="M22 4L12 14.01l-3-3"></path>
+                </svg>
+              </div>
+              <div class="flex-grow pl-4">
+                <h2 class="mb-1 font-bold tracking-wider text-gray-900 title-font text-m">STEP 3</h2>
+                <p class="leading-relaxed">You will receive your <b>Remote Activity Playbook</b>  </p>
+              </div>
+            </div>
+            <div class="relative flex"> 
+            </div>
+          </div>     
+          <img 
+          data-aos="fade-left" 
+          data-aos-duration="1250" 
+          class="object-cover object-center mt-10 rounded-lg lg:w-3/5 md:w-1/2 md:mt-0 lazyload" 
+          src="img/woman-homeoffice-s.webp" alt="women-homeoffice"
+          >
+      </div>
+      </div> <div id="example"></div>
+  </section>
+  <!-- Example -->
+  <section class="text-gray-600 body-font bg-indigo-100" data-aos="fade-down">
+    <h1 class="mb-4 text-2xl font-bold text-gray-900 sm:text-3xl title-font text-center">Example Playbook</h1>
+    <div class="flex justify-center mt-6"> 
+      <div class="inline-flex w-16 h-1 bg-purple-800 rounded-full"></div><br>
+    </div>  
+      <div class="container px-5 py-24 mx-auto flex flex-wrap">
+        <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+          <center>
+          <button 
+              class="bg-purple-800 hover:bg-purple-900 text-white font-bold py-2 px-4 rounded" 
+              id="buttonframe">🎉Show now</button></center>
+
+          <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+          padding-bottom: 48px; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+          border-radius: 8px; will-change: transform;" data-aos="fade-right">
+          
+          <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+          <script type="text/javascript">
+          $(function(){
+              $('#buttonframe').click(function(){ 
+                  if(!$('#iframe').length) {
+                          $('#iframeHolder').html('<iframe style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAEfAh_NbIo&#x2F;view?embed"> </iframe>');
+                  }
+                         
+           function randomInRange(min, max) {
+              return Math.random() * (max - min) + min;
+            }
+
+            confetti({
+              angle: randomInRange(55, 125),
+              spread: randomInRange(50, 70),
+              particleCount: randomInRange(50, 100),
+              origin: { y: 0.6 }
+            });
+                });  
+                   });
+          </script>
+         <div id="iframeHolder"></div>
+         
+         
+
+        </div>
+        <a 
+        href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAEdsQk-SQQ&#x2F;view?utm_content=DAEdsQk-SQQ&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" 
+        target="_blank" 
+        rel="noopener">
+          </a> 
+        </div>
+        <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
+          <p class="mx-auto text-lg text-medium text-base leading-relaxed lg:w-2/2 text-left">
+            ✔️<b> Ditch endless searching</b> <br> We'll do the research for you!<br><br>
+            ✔️<b> Have fun</b><br> With our recommendation for entertaining games, quizzes etc. <br><br>
+            ✔️<b> Save valuable time</b><br> You get the dynamic overview with cool apps for Slack, Teams etc.<br><br>
+            ✔️<b> Get inspired</b><br> Cool websites for virtual offices, audio-only meetings and more!<br> <br>
+
+      </div>
+  </section>
+    <!-- Ideal Customer -->
+  <section class="text-gray-600 body-font bg-indigo-100" data-aos="fade-down">
+        <div class="container px-5 py-22 mx-auto">
+          <div class="mb-20 text-center">
+            <h1 class="mb-4 text-2xl font-bold text-gray-900 sm:text-4xl title-font">Ideal Clients</h1>
+            <p class="mx-auto text-base leading-relaxed xl:w-2/4 lg:w-3/4 text-gray-500s"></p>
+          </p>
+          <div class="flex justify-center mt-6">
+            <div class="inline-flex w-16 h-1 bg-purple-800 rounded-full"></div>
+          </div> <br>
+            <p class="mx-auto text-lg text-medium text-base leading-relaxed lg:w-2/3">
+              ✔️ <b>Teamleaders</b>, that want to improve their teams social connection <br>
+              ✔️ <b>HR / Peoples Manager</b>, that want to inspire their teams <br>
+              ✔️ <b>Team Size</b> about 5+ people <br>
+              
+          </div>
+          <div class="flex flex-wrap -mx-4 -mt-4 -mb-10 space-y-6 sm:-m-4 md:space-y-0">
+            <div class="flex flex-col items-center p-4 text-center md:w-1/3">
+              <div class="inline-flex items-center justify-center bg-purple-700 flex-shrink-0 w-28 h-28 mb-5 text-purple-800 rounded-full">
+                <img 
+                alt="agency" 
+                class="w-24 h-24 bg-green-300 object-cover object-center flex-shrink-0 rounded-full mb-2 mr-2 ml-2 mt-2 display: none;" 
+                src="img/agency-man-crop.jpg"
+                >
+              </div>
+              <div class="flex-grow">
+                <h2 class="mb-3 text-lg font-medium text-gray-900 title-font">Agency</h2>
+                <p class="text-base leading-relaxed">Ad-, Media-, Communications-Agencies with 10 - 500 employees
+              </div>
+            </div>
+            <div class="flex flex-col items-center p-4 text-center md:w-1/3">
+              <div class="inline-flex items-center justify-center bg-purple-700 flex-shrink-0 w-28 h-28 mb-5 text-purple-800 rounded-full">
+                <img 
+                alt="agency" 
+                class="w-24 h-24 bg-green-300 object-cover object-center flex-shrink-0 rounded-full mb-2 mr-2 ml-2 mt-2 display: none; " 
+                src="img/women-laptop-laughing-crop.jpg"
+                >
+              </div>
+              <div class="flex-grow">
+                <h2 class="mb-3 text-lg font-medium text-gray-900 title-font">SMB</h2>
+                <p class="text-base leading-relaxed">Small and Medium Sized Businesses with 10 - 500 employees</p>
+              </div>
+            </div>
+            <div class="flex flex-col items-center p-4 text-center md:w-1/3">
+              <div class="inline-flex items-center justify-center bg-purple-700 flex-shrink-0 w-28 h-28 mb-5 text-purple-800 rounded-full">
+                <img a
+                lt="agency" 
+                class="w-24 h-24 bg-green-300 object-cover object-center flex-shrink-0 rounded-full mb-2 mr-2 ml-2 mt-2 display: none;" 
+                src="img/customer-babay-cry-crop.jpg"
+                >
+              </div>
+              <div class="flex-grow">
+                <h2 class="mb-3 text-lg font-medium text-gray-900 title-font">Are you missing?</h2>
+                <p class="text-base leading-relaxed">No worries, just get in touch with us and we will find a solution</p>
+              </div>
+            </div>
+          </div>
+        </div><div id="faq"></div>
+  </section>
+  <br>
+  <br>
+  <!-- Go to top -->
+  <button class="scrollToTopBtn">              
+      <div class="relative z-10 inline-flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-purple-800 rounded-full">
+      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" class="w-5 h-5" viewBox="0 0 24 12">
+        <path d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+      </svg>
+    </div>
+  </button>
+  <!-- FAQ -->
+  <section class="text-gray-600 body-font bg-indigo-100" data-aos="fade-down" >       
+     <div class="text-center mb-18">
+           <h1 class="mb-4 text-2xl font-medium text-gray-900 sm:text-3xl title-font">FAQ</h1>
+           <div class="flex justify-center mt-6">
+             <div class="inline-flex w-16 h-1 bg-purple-700 rounded-full"></div>
+           </div>
+     </div>
+  <section class="overflow-hidden text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="-my-8 divide-y-2 divide-gray-100">
+            <div x-data={show:false} class="flex flex-wrap py-8 md:flex-nowrap text-left">
+              <div class="md:flex-grow" id="headingOne">
+                <button @click="show=!show" class="mb-2 text-2xl text-left font-medium text-purple-600 title-font" type="button">
+                How do you find suitable remote team activities?
+                </button>
+                <h2 class="mb-2 text-2xl text-left font-medium text-gray-900 title-font"></h2>
+                <div x-show="show">
+                <p class="leading-relaxed text-left">We have a database of over 100 tools, apps, website links, articles that we search through. In addition, we do research on the basis of the feedback you give us and thus work out a suitable, individual solution.</p>
+              </div>
+              </div>
+            </div>
+
+            <div x-data={show:false} class="flex flex-wrap py-8 md:flex-nowrap text-left">
+              <div class="md:flex-grow" id="headingOne">
+                <button @click="show=!show" class="mb-2 text-2xl text-left font-medium text-purple-600 title-font" type="button">
+                How much does your service cost?
+                </button>
+                <h2 class="mb-2 text-2xl text-left font-medium text-gray-900 title-font"></h2>
+                <div x-show="show">
+                <p class="leading-relaxed text-left">Just have a look over at our <a href="pricing.html"><u>pricing</u></a>.</p>
+              </div>
+              </div>
+            </div>
+
+            <div x-data={show:false} class="flex flex-wrap py-8 md:flex-nowrap text-left">
+              <div class="md:flex-grow" id="headingOne">
+                <button @click="show=!show" class="mb-2 text-2xl text-left font-medium text-purple-600 title-font" type="button">
+                Do you also do virtual team events?
+                </button>
+                <h2 class="mb-2 text-2xl text-left font-medium text-gray-900 title-font"></h2>
+                <div x-show="show">
+                <p class="leading-relaxed text-left">No, we do not hold team events. If necessary, we will be happy to help you find suitable partners.</p>
+              </div>
+              </div>
+            </div>
+
+            <div x-data={show:false} class="flex flex-wrap py-8 md:flex-nowrap text-left">
+              <div class="md:flex-grow" id="headingOne">
+                <button @click="show=!show" class="mb-2 text-2xl text-left font-medium text-purple-600 title-font" type="button">
+                How long does your service take?
+                </button>
+                <h2 class="mb-2 text-2xl text-left font-medium text-gray-900 title-font"></h2>
+                <div x-show="show">
+                <p class="leading-relaxed text-left">From the time the order is placed to the finished playbook, we currently expect around 10-14 days (depending on the number of sessions and availability of dates). If support is still required with the implementation, this can be agreed on individually.</p>
+              </div>
+              </div>
+            </div>
+
+            <div x-data={show:false} class="flex flex-wrap py-8 md:flex-nowrap text-left">
+              <div class="md:flex-grow" id="headingOne">
+                <button @click="show=!show" class="mb-2 text-2xl text-left font-medium text-purple-600 title-font" type="button">
+                  Who does the work? Is it going to be outsourced?
+                </button>
+                <h2 class="mb-2 text-2xl text-left font-medium text-gray-900 title-font"></h2>
+                <div x-show="show">
+                <p class="leading-relaxed text-left">We do the work. Or rather me, Jesse 😊. Nothing is outsourced. If necessary, I hire competent and friendly people who support me wonderfully with this service.</p>
+              </div>
+              </div>
+            </div>
+            
+            <div x-data={show:false} class="flex flex-wrap py-8 md:flex-nowrap text-left">
+              <div class="md:flex-grow" id="headingOne">
+                <button @click="show=!show" class="mb-2 text-2xl text-left font-medium text-purple-600 title-font" type="button">
+                  My question has not been answered, how can I contact you?
+                </button>
+                <h2 class="mb-2 text-2xl text-left font-medium text-gray-900 title-font"></h2>
+                <div x-show="show">
+                <p class="leading-relaxed text-left">No problem, just have a look at <a href="contact.html"> <u>contact.</u> </a></p>
+              </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+  </section>
+  </div>
+  <!-- CTA5 -->
+  <section class="text-gray-600 body-font bg-purple-900" data-aos="fade-down">
+    <div class="container px-5 py-24 mx-auto ">
+      <div class="flex flex-col items-start mx-auto lg:w-2/3 sm:flex-row sm:items-center">
+        <h1 class="flex-grow text-3xl font-bold text-white sm:pr-18 title-font">We will create your<br> 
+          <span style="color: #e500a4;">Team Activity Playbook,</span> <div id="ablauf">    
+        <p class="text-white text-medium ">or support you with the implementation.</p> </h1>
+        <button 
+          id="openCalendar" 
+          class="flex-shrink-0 px-8 py-2 mt-10 ml-1 text-xl text-white border-0 rounded focus:outline-none hover:bg-purple-800 sm:mt-2" 
+          style="background-color: #e500a4;">
+          Great, let's talk!</button>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <my-footer></my-footer>
+  <!-- Scripts -->
+  <script type="module" src="main.js" defer></script>
+  <script type="text/javascript" src="https://x.ai/embed/xdotai-embed.js" id="xdotaiEmbed" data-page="/meet-jess/remotenactive" data-height data-width data-element="#openCalendar" async></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  
+  <!--Start of Tawk.to Script
+      <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/60941f12185beb22b30ac88c/1f519io8p';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+      </script>
+  End of Tawk.to Script-->
+
+
+</body>
+</html>
