@@ -45,7 +45,7 @@ Team Leader + HR / Peoples Managers
 05/2021 - 10/21 
 
 **Traffic / Stats**
-[Plausible Data ](https://plausible.io/remotenactive.com?period=custom&from=2021-05-03&to=2021-10-25             
+[Plausible Data](https://plausible.io/remotenactive.com?period=custom&from=2021-05-03&to=2021-10-25)             
 
 I then switched to a CMS-based Website with Ghost as this was the fastest way to manage user-management & payment.
 
