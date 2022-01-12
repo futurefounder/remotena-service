@@ -59,8 +59,7 @@ Javascript Libraries
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/futurefounder/ReadME-Generator/blob/main/LICENSE.md) for more information.
-
+Distributed under the MIT License. See [LICENSE](https://github.com/futurefounder/remotena/blob/main/LICENSE) for more information.
 
 ## Acknowledgements
              
