@@ -7,8 +7,8 @@
     The Lading Page that I created myself for my consulting service, that reached 1,5k Page Views from 860 Unique Visitors and generated 1,7k $ over the course of 6 months
     <br/>
     <br/>
-    <a href="https://github.com/futurefounder/ReadME-Generator">View Demo</a>
-    .
+    <a href="https://github.com/futurefounder/remotena>View Demo</a>
+  
   </p>
 </p>
 
@@ -63,7 +63,9 @@ Distributed under the MIT License. See [LICENSE](https://github.com/futurefounde
 
 
 ## Acknowledgements
-
+             
+Readme Generator by
+             
 * [ShaanCoding](https://github.com/ShaanCoding/)
 * [Othneil Drew](https://github.com/othneildrew/Best-README-Template)
 * [ImgShields](https://shields.io/)
