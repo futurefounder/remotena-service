@@ -24,8 +24,6 @@
 
 ## About The Project
 
-![Screen Shot](images/screenshot.png)
-
 **The Project in a tweet**
 
 A b2b service for remote teams
